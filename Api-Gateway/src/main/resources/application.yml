@@ -1,0 +1,31 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    discovery:
+      locator:
+        enabled: true
+        lowerCaseServiceId: true
+    gateway:
+      routes:
+        - id: CITY-SERVICE
+          uri: lb://CITY-SERVICE
+          predicates:
+            - Path=/api/city/**
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/user/**
+        - id: AUTH-SERVICE
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+secret:
+  key: IO.DESOFME

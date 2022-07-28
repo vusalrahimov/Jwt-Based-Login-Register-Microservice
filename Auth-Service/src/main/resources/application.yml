@@ -1,0 +1,20 @@
+secret:
+  key: IO.DESOFME
+expired:
+  time: 600
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservice
+    password: 12345
+    username: postgres
+  application:
+    name: AUTH-SERVICE
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8040
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
