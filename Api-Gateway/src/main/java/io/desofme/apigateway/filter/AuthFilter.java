@@ -41,7 +41,7 @@ public class AuthFilter implements GlobalFilter {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpResponse response = exchange.getResponse();
-        ServerHttpRequest request = exchange.getRequest().mutate().build();
+        ServerHttpRequest request = exchange.getRequest();
         if(request.getURI().toString().contains("/auth")){
             return chain.filter(exchange);
         }else {
