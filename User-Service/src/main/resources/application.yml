@@ -6,10 +6,10 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/microservice
     username: postgres
-    password: 12345
+    password: postgres
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
 eureka:
   client:
     serviceUrl:

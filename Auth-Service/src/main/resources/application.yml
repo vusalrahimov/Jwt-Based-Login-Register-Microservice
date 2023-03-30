@@ -1,11 +1,11 @@
 secret:
-  key: IO.DESOFME
+  key: SVRTX1NFQ1JFVF9LRVlfRk9SX0FQUExJQ0FUSU9OX01ZX01JQ1JPc2VydmljZV9jbG91ZF9hcHBfcmVwb3NpeW9yaXk=
 expired:
   time: 600
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/microservice
-    password: 12345
+    password: postgres
     username: postgres
   application:
     name: AUTH-SERVICE
